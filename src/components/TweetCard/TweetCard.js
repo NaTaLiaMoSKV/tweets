@@ -13,6 +13,7 @@ import css from './TweetCard.module.css'
 export default function TweetCard() {
     const dispatch = useDispatch();
     const usersList = useSelector(selectUsersList);
+
     const followList = useSelector(selectFollowList);
 
     useEffect(() => {
@@ -34,10 +35,8 @@ export default function TweetCard() {
 
         if (isUserFollowing(user)) {
             dispatch(unfollowUser(user));
-            // dispatch(fetchUsers());
         } else {
             dispatch(followUser(user));
-            // dispatch(fetchUsers());
         }
     }
 
