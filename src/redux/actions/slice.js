@@ -9,6 +9,7 @@ const actionsSlice = createSlice({
         error: null,
     },
     extraReducers: {
+
         [followUser.pending](state) {
             state.isUpdating = true;
         },
@@ -17,8 +18,10 @@ const actionsSlice = createSlice({
             state.error = action.payload;
         },
         [followUser.fulfilled](state, action) {
+            // console.log('after follow: ' + action.payload.followers);
+            const { id } = action.payload;
             state.isUpdating = false;
-            state.followList.push(action.payload);
+            state.followList.push( { id: id });
         },
         [unfollowUser.pending](state) {
             state.isUpdating = true;
@@ -28,6 +31,7 @@ const actionsSlice = createSlice({
             state.error = action.payload;
         },
         [unfollowUser.fulfilled](state, action) {
+            // console.log('after unfollow: ' + action.payload.followers);
             state.isUpdating = false;
             const index = state.followList.findIndex(
                 user => user.id === action.payload.id

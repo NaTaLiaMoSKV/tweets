@@ -8,23 +8,9 @@ export const fetchUsers = createAsyncThunk(
     async(_, thunkAPI) => {
         try {
             const res = await axios.get('/users');
-            console.log(res.data);
             return res.data;
         } catch(error) {
             return thunkAPI.rejectWithValue(error.message);
         }
     }
 )
-
-// export const followUser = createAsyncThunk(
-//     'tweets/fetch',
-//     async(_, thunkAPI) => {
-//         try {
-//             const res = await axios.get('/users');
-//             console.log(res.data);
-//             return res.data;
-//         } catch(error) {
-//             return thunkAPI.rejectWithValue(error.message);
-//         }
-//     }
-// )
