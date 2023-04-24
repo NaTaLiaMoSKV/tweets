@@ -1,0 +1,87 @@
+.tweets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* justify-content: center; */
+}
+
+.tweet {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 380px;
+
+    background: linear-gradient(114.99deg, #471CA9 -0.99%, #5736A3 54.28%, #4B2A99 78.99%);
+    box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
+    border-radius: 20px;
+}
+
+.tweet__logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.tweet__contentImage {
+    position: absolute;
+    top: 28px;
+    left: 36px;
+}
+.rect {
+    width: 380px;
+    height: 8px;
+    margin-top: 214px;
+
+    background: #EBD8FF;
+    box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.06), inset 0px -1.71846px 3.43693px #AE7BE3, inset 0px 3.43693px 2.5777px #FBF8FF;
+}
+
+.eclipse {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    margin-top: 178px;
+    /* margin-left: 150px; */
+    /* left: 150px; */
+    /* top: 178px; */
+
+    background: #EBD8FF;
+    box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06), inset 0px -2.19582px 4.39163px #AE7BE3, inset 0px 4.39163px 3.29372px #FBF8FF;
+    border-radius: 50%;
+}
+
+.eclipseBg {
+    width: 62px;
+    height: 62px;
+    margin: 9px;
+    border-radius: 50%;
+    background-color: #5736A3;
+}
+
+.tweet__data {
+    margin-top: 26px;
+    font-family: 'Montserrat';
+    /* font-style: normal; */
+    /* font-weight: 500; */
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #EBD8FF;
+}
+
+.tweet__button {
+    margin-top: 10px;
+    margin-bottom: 36px;
+    padding: 14px 28px;
+
+    width: 196px;
+    height: 50px;
+
+    background: #EBD8FF;
+    border: none;
+    box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
+    border-radius: 10.3108px;
+}
